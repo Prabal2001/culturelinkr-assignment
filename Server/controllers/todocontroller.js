@@ -1,7 +1,7 @@
 const TodoModel = require("../Models/Todo");
 
 exports.homeTodo = (req,res) => {
-   return res.json("hello,this is a backend of todolist");
+    res.send("hello,this is a backend of todolist");
 }
 exports.addToDo = async (req, res) => {
   const { task } = req.body;
