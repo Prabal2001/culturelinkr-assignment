@@ -8,6 +8,9 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/todos", todoroute);
 
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
 connectDB();
 
 const PORT = 8000;
