@@ -9,7 +9,9 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/todos", todoroute);
 
-connectDB();
+app.get("/",(req,res) => {
+ res.send("hello backend todo");
+}
 
 const PORT = 8000;
 app.listen(PORT, () => {
