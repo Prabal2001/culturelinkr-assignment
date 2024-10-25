@@ -4,7 +4,7 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 const todoroute = require("./routes/todoroute");
 const app = express();
-connectDB();
+connectDB(); 
 app.use(cors());
 app.use(express.json());
 app.use("/api/todos", todoroute);
