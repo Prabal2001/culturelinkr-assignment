@@ -8,6 +8,10 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/todos", todoroute);
 
+app.get("/",(req,res)=>{
+    res.send("hello,this is backend");
+}
+
 connectDB();
 
 const PORT = 8000;
