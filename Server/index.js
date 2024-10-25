@@ -4,13 +4,11 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 const todoroute = require("./routes/todoroute");
 const app = express();
+connectDB();
 app.use(cors());
 app.use(express.json());
 app.use("/api/todos", todoroute);
 
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
 connectDB();
 
 const PORT = 8000;
