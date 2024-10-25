@@ -3,6 +3,7 @@ const todoController = require("../controllers/todocontroller");
 
 const router = express.Router();
 
+router.get("/",todoController.homeTodo);
 router.get("/get-todo", todoController.getTodo);
 router.post("/add-todo", todoController.addToDo);
 
