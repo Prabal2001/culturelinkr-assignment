@@ -11,7 +11,7 @@ app.use("/api/todos", todoroute);
 
 app.get("/",(req,res) => {
  res.send("hello backend todo");
-}
+})
 
 const PORT = 8000;
 app.listen(PORT, () => {
